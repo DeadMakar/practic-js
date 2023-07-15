@@ -14,9 +14,6 @@
 //   alert("Не знаєте? ECMAScript!");
 // }
 
-
-
-
 // Напишіть програму, яка отримає від користувача
 //  число (кількість хвилин) та виведе в консоль
 //  рядок у форматі годин та хвилин
@@ -35,7 +32,6 @@
 
 // console.log(`${correctHours} : ${correctMinuts}`)
 
-
 // const message = prompt("Ведіть число");
 
 // let correctHours = String(Math.floor(message / 60)).padStart(2, 0);
@@ -43,8 +39,6 @@
 // let correctMinuts = String(message - (correctHours * 60)).padStart(2, 0);
 
 // console.log(`${correctHours} : ${correctMinuts}`)
-
-
 
 /**
  *? Напишіть цикл, який виводить у консоль
@@ -59,11 +53,32 @@ const min = 23;
 //     console.log(i);
 // };
 // for (let i=min; i <= max; i+=1) {
-    
+
 //     if (i % 2 ===  0) {
 //         console.log(i);
-        
+
 //     }
 // };
 // console.log(50 % 2);
 // console.log(51 % 2);
+
+/**
+ *? При завантаженні сторінки користувачеві пропонується
+ *? в prompt ввести число. Введення додається до значення
+ *? змінної total.
+ *? Операція введення числа триває до того часу,
+ *? поки користувач не натисне кнопку Cancel у prompt.
+ *? Після того як користувач припинив введення, натиснувши на
+ *? кнопку Cancel, показати alert з рядком "Загальна сума введених чисел дорівнює [число]."
+ 
+ *! Робити перевірку, що користувач ввів саме число,
+ *! а не довільний набір символів не потрібно.
+ */
+
+let total = 0;
+let message = prompt("enter number");
+while (message !== null) {
+  total += Number(message);
+  message = prompt("enter number");
+}
+alert(total);
