@@ -136,19 +136,36 @@ for (const key of arr) {
  *? з таким ім'ям, ціною та кількістю з об'єкта
  */
 
-const stones = [
-  { name: "Изумруд", price: 1300, quantity: 4 },
-  { name: "Бриллиант", price: 2700, quantity: 6 },
-  { name: "Сапфир", price: 400, quantity: 7 },
-  { name: "Щебень", price: 150, quantity: 100 },
-];
+// const stones = [
+//   { name: "Изумруд", price: 1300, quantity: 4 },
+//   { name: "Бриллиант", price: 2700, quantity: 6 },
+//   { name: "Сапфир", price: 400, quantity: 7 },
+//   { name: "Щебень", price: 150, quantity: 100 },
+// ];
 
-function calcTotalPrice(someStones, stoneName) {
-  for (const stone of someStones) {
-    if (stone.name === stoneName) {
-      return stone.price * stone.quantity;
-    }
-  }
-  return 0;
-}
-console.log(calcTotalPrice(stones, "Брилнт"));
+// function calcTotalPrice(someStones, stoneName) {
+//   for (const stone of someStones) {
+//     if (stone.name === stoneName) {
+//       return stone.price * stone.quantity;
+//     }
+//   }
+//   return 0;
+// }
+// console.log(calcTotalPrice(stones, "Брилнт"));
+
+// напиши код який із массиву arr видаляє елемент foo.
+// розвертає цей массив
+// і повертає рядок js is the best
+// вхідний массив не має змінюватись (мутується)
+
+const arr = ["best", "the", "foo", "is", "js"];
+
+const newArr = [...arr];
+const index = newArr.indexOf("foo");
+newArr.splice(index, 1);
+console.log(newArr);
+
+newArr.reverse();
+console.log(newArr);
+const sdsa = newArr.join(" ");
+console.log(sdsa);
