@@ -93,7 +93,7 @@
  *? ключ: значення використовуючи Object.keys() і for...of
  */
 
-const user = {
+/* const user = {
   name: "John",
   age: 20,
   hobby: "tennis",
@@ -107,4 +107,23 @@ const arr = Object.keys(user);
 
 for (const key of arr) {
   console.log(`${key}: ${user[key]}`);
+} */
+
+/* Напишіть функцію, яка приймає об'єкт і рахує загальну суму зарплат працівників. */
+
+const someObj = {
+  worker1: 360,
+  worker2: 750,
+  worker3: 240,
+};
+
+function calcSelery(obj) {
+  const weluse = Object.values(obj);
+  let total = 0;
+  for (const item of weluse) {
+    total += item;
+  }
+  return total;
 }
+const resalt = calcSelery(someObj);
+console.log (resalt);
