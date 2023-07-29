@@ -170,10 +170,25 @@ for (const key of arr) {
 // const sdsa = newArr.join(" ");
 // console.log(sdsa);
 
-const string = arr
-  .slice(0, arr.indexOf("foo"))
-  .concat(arr.slice(arr.indexOf("foo") + 1, arr.length))
-  .reverse()
-  .join(" ");
+// const string = arr
+//   .slice(0, arr.indexOf("foo"))
+//   .concat(arr.slice(arr.indexOf("foo") + 1, arr.length))
+//   .reverse()
+//   .join(" ");
 
-console.log(string);
+// console.log(string);
+// Напишит функцію, яка приймає два аргументи (массив рядків і рядок), перевіряє чи є такий рядок у масиві.
+// якщо такий рядок знайдено у массиві, потрібно утворити з нього массив, розвернути і повернути із функції
+// якщо такого рядку немає то потрібно повернути рядок "Not found 🙄"
+
+const arr = ["aPple", "bananA", "cHerry", "Orange"];
+
+function findString(array, string) {
+  for (let item of array) {
+    if (item.toLowerCase() === string.toLowerCase()) {
+      return item.split("").reverse();
+    }
+  }
+  return "Not found 🙄";
+}
+console.log(findString(arr, "sds"));
