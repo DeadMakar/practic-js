@@ -158,14 +158,22 @@ for (const key of arr) {
 // і повертає рядок js is the best
 // вхідний массив не має змінюватись (мутується)
 
-const arr = ["best", "the", "foo", "is", "js"];
+// const arr = ["best", "the", "foo", "is", "js"];
 
-const newArr = [...arr];
-const index = newArr.indexOf("foo");
-newArr.splice(index, 1);
-console.log(newArr);
+// const newArr = [...arr];
+// const index = newArr.indexOf("foo");
+// newArr.splice(index, 1);
+// console.log(newArr);
 
-newArr.reverse();
-console.log(newArr);
-const sdsa = newArr.join(" ");
-console.log(sdsa);
+// newArr.reverse();
+// console.log(newArr);
+// const sdsa = newArr.join(" ");
+// console.log(sdsa);
+
+const string = arr
+  .slice(0, arr.indexOf("foo"))
+  .concat(arr.slice(arr.indexOf("foo") + 1, arr.length))
+  .reverse()
+  .join(" ");
+
+console.log(string);
