@@ -46,8 +46,8 @@
  *? Виведіть у консоль усі парних чисел від min до max
  */
 
-const max = 50;
-const min = 23;
+// const max = 50;
+// const min = 23;
 
 // for (let i=max; i >= min; i-=1) {
 //     console.log(i);
@@ -62,23 +62,49 @@ const min = 23;
 // console.log(50 % 2);
 // console.log(51 % 2);
 
+// /**
+//  *? При завантаженні сторінки користувачеві пропонується
+//  *? в prompt ввести число. Введення додається до значення
+//  *? змінної total.
+//  *? Операція введення числа триває до того часу,
+//  *? поки користувач не натисне кнопку Cancel у prompt.
+//  *? Після того як користувач припинив введення, натиснувши на
+//  *? кнопку Cancel, показати alert з рядком "Загальна сума введених чисел дорівнює [число]."
+
+//  *! Робити перевірку, що користувач ввів саме число,
+//  *! а не довільний набір символів не потрібно.
+//  */
+
+// let total = 0;
+// let message = prompt("enter number");
+// while (message !== null) {
+//   total += Number(message);
+//   message = prompt("enter number");
+// }
+// alert(total);
+
 /**
- *? При завантаженні сторінки користувачеві пропонується
- *? в prompt ввести число. Введення додається до значення
- *? змінної total.
- *? Операція введення числа триває до того часу,
- *? поки користувач не натисне кнопку Cancel у prompt.
- *? Після того як користувач припинив введення, натиснувши на
- *? кнопку Cancel, показати alert з рядком "Загальна сума введених чисел дорівнює [число]."
- 
- *! Робити перевірку, що користувач ввів саме число,
- *! а не довільний набір символів не потрібно.
+ *? Напиши скрипт для об'єкта user,
+ *? послідовно:
+ *? 1 додати поле mood зі значенням 'happy'
+ *? 2 замінить hobby на 'skydiving'
+ *? 3 замінить значення premium на false
+ *? 4 виводить вміст об'єкта users у форматі
+ *? ключ: значення використовуючи Object.keys() і for...of
  */
 
-let total = 0;
-let message = prompt("enter number");
-while (message !== null) {
-  total += Number(message);
-  message = prompt("enter number");
+const user = {
+  name: "John",
+  age: 20,
+  hobby: "tennis",
+  premium: true,
+};
+user.mood = "happy";
+user.hobby = "skydiving";
+user.premium = false;
+
+const arr = Object.keys(user);
+
+for (const key of arr) {
+  console.log(`${key}: ${user[key]}`);
 }
-alert(total);
