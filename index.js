@@ -111,19 +111,44 @@ for (const key of arr) {
 
 /* Напишіть функцію, яка приймає об'єкт і рахує загальну суму зарплат працівників. */
 
-const someObj = {
-  worker1: 360,
-  worker2: 750,
-  worker3: 240,
-};
+// const someObj = {
+//   worker1: 360,
+//   worker2: 750,
+//   worker3: 240,
+// };
 
-function calcSelery(obj) {
-  const weluse = Object.values(obj);
-  let total = 0;
-  for (const item of weluse) {
-    total += item;
+// function calcSelery(obj) {
+//   const weluse = Object.values(obj);
+//   let total = 0;
+//   for (const item of weluse) {
+//     total += item;
+//   }
+//   return total;
+// }
+// const resalt = calcSelery(someObj);
+// console.log (resalt);
+
+/**
+ *? Напишіть ф-цію calcTotalPrice(someStones, stonesName),
+ *? яка приймає масив об'єктів та
+ *? рядок під назвою каменю.
+ *? Функція рахує та повертає загальну вартість каменів
+ *? з таким ім'ям, ціною та кількістю з об'єкта
+ */
+
+const stones = [
+  { name: "Изумруд", price: 1300, quantity: 4 },
+  { name: "Бриллиант", price: 2700, quantity: 6 },
+  { name: "Сапфир", price: 400, quantity: 7 },
+  { name: "Щебень", price: 150, quantity: 100 },
+];
+
+function calcTotalPrice(someStones, stoneName) {
+  for (const stone of someStones) {
+    if (stone.name === stoneName) {
+      return stone.price * stone.quantity;
+    }
   }
-  return total;
+  return 0;
 }
-const resalt = calcSelery(someObj);
-console.log (resalt);
+console.log(calcTotalPrice(stones, "Брилнт"));
