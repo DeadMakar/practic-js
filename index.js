@@ -287,3 +287,42 @@ for (const key of arr) {
 // newStorage.removeItem("dgdsgds");
 
 // console.log(newStorage.getItems());
+
+
+
+
+//TODO:=============================================
+
+/**
+ *? Напиши клас Client який створює об'єкт
+ *? з ​​властивостями login email
+ *? Оголоси приватні властивості #login #email,
+ *? доступ до яких зроби через геттер та сеттер login email
+ */
+
+
+
+class Client{
+  #login
+  #email
+  constructor(login, email) {
+    this.#login = login;
+    this.#email = email;
+  }
+  get login() {
+    return this.#login
+  }
+  set login(newLogin) {
+    this.#login = newLogin
+  }
+  get email() {
+    return this.#email
+  }
+  set email(newEmail) {
+    this.#email = newEmail
+  }
+} 
+ 
+const user = new Client('mango', 'mkjh')
+user.email = 'non'
+console.log(user.email);
