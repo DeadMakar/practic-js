@@ -181,14 +181,46 @@ for (const key of arr) {
 // якщо такий рядок знайдено у массиві, потрібно утворити з нього массив, розвернути і повернути із функції
 // якщо такого рядку немає то потрібно повернути рядок "Not found 🙄"
 
-const arr = ["aPple", "bananA", "cHerry", "Orange"];
+// const arr = ["aPple", "bananA", "cHerry", "Orange"];
 
-function findString(array, string) {
-  for (let item of array) {
-    if (item.toLowerCase() === string.toLowerCase()) {
-      return item.split("").reverse();
-    }
-  }
-  return "Not found 🙄";
-}
-console.log(findString(arr, "sds"));
+// function findString(array, string) {
+//   for (let item of array) {
+//     if (item.toLowerCase() === string.toLowerCase()) {
+//       return item.split("").reverse();
+//     }
+//   }
+//   return "Not found 🙄";
+// }
+// console.log(findString(arr, "sds"));
+
+///**
+// *? Напишіть функцію, яка приймає массив об'єктів і повертає новий массив
+// *? Зробіть знижку 20 % на всі фрукти у масиві
+// *? Надайте ід для кожного продукту
+// */
+
+const fruits = [
+  { name: "apple", price: 200 },
+  { name: "orange", price: 300 },
+  { name: "grapes", price: 750 },
+];
+
+// const foo = (array) => {
+//   return array.map((item, index)=> {
+//     return {
+//       ...item,
+//       price: item.price * 0.8,
+//       id: index+1,
+//     }
+//    })
+// }
+
+// console.log(foo(fruits));
+
+// const foo = (array) => array.map((item, index) =>({
+//       ...item,
+//       price: item.price * 0.8,
+//       id: index+1,
+//     })
+//    )
+
