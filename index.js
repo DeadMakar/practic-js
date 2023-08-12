@@ -302,27 +302,89 @@ for (const key of arr) {
 
 
 
-class Client{
-  #login
-  #email
-  constructor(login, email) {
-    this.#login = login;
-    this.#email = email;
-  }
-  get login() {
-    return this.#login
-  }
-  set login(newLogin) {
-    this.#login = newLogin
-  }
-  get email() {
-    return this.#email
-  }
-  set email(newEmail) {
-    this.#email = newEmail
-  }
-} 
+// class Client{
+//   #login
+//   #email
+//   constructor(login, email) {
+//     this.#login = login;
+//     this.#email = email;
+//   }
+//   get login() {
+//     return this.#login
+//   }
+//   set login(newLogin) {
+//     this.#login = newLogin
+//   }
+//   get email() {
+//     return this.#email
+//   }
+//   set email(newEmail) {
+//     this.#email = newEmail
+//   }
+// }
  
-const user = new Client('mango', 'mkjh')
-user.email = 'non'
-console.log(user.email);
+// const user = new Client('mango', 'mkjh')
+// user.email = 'non'
+// console.log(user.email);
+
+
+//TODO:=============================================
+/**
+ *? Напиши клас Notes який управляє колекцією нотаток у
+ *? властивості items.
+ *? Нотатка - це об'єкт із властивостями text і priority.
+ *? Додай класу статичний метод Priority,
+ *? який буде повертати об'єкт із пріоритетами.
+ *? Додай методи addNote(note), removeNote(text)
+ *? updatePriority(text, newPriority)
+ */
+
+//
+
+// class Notes{
+//  static Priority() {
+//     return {
+//       HIGHT: "hight",
+//       LOW: "low",
+//     };
+//   }
+
+
+//   constructor() {
+//     this.items = [];
+//   }
+
+//   addNote(note) {
+//     this.items.push(note);
+//   }
+
+//   removeNote(text) {
+//     this.items = this.items.filter(item => text !== item.text);
+//   }
+
+//   updatePriority({text, newPriority}) {
+//     const index = this.items.findIndex(item => item.text === text);
+//     if (index !== -1) {
+//       this.items[index].priorety = newPriority;
+//     }
+//   }
+// }
+
+// const newNotes = new Notes();
+// newNotes.addNote({ text: 'note1', priorety: Notes.Priority().LOW });
+// newNotes.updatePriority({ text: "note1", newPriority: Notes.Priority().HIGHT });
+// console.log(newNotes);
+
+// ====================================================================
+/*Напишіть функцію checkBrackets(str) яка приймає рядок жс коду (someFn)
+  і перевіряє правильність закриття дужок () {} []
+  Якщо рядок містить коректний код функція повертає true.
+  В іншому випадку повертає false
+*/
+
+const someFn = `function foo() {
+  const arr = [1, 2, 3];
+  console.log(arr);
+}`;
+
+console.log(checkBrackets(someFn));
