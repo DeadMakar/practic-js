@@ -224,28 +224,66 @@ for (const key of arr) {
 //     })
 //    )
 
-
 /**
 *? Поверніть об'єкт, в якому вказано кількість тегів.
 *? Очікуваний результат {js: 3, nodejs: 3, html: 2, css: 2, react: 2}
 
  */
-const tweets = [
-  { id: "000", likes: 5, tags: ["js", "nodejs"] },
-  { id: "001", likes: 2, tags: ["html", "css"] },
-  { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
-  { id: "003", likes: 8, tags: ["css", "react"] },
-  { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
-];
+// const tweets = [
+//   { id: "000", likes: 5, tags: ["js", "nodejs"] },
+//   { id: "001", likes: 2, tags: ["html", "css"] },
+//   { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+//   { id: "003", likes: 8, tags: ["css", "react"] },
+//   { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+// ];
 
+// const array = tweets.flatMap(item => item.tags);
+// console.log(array);
 
-const array = tweets.flatMap(item => item.tags);
-console.log(array);
+// const result = array.reduce((acc, item) => {
+//   return {
+//     ...acc,
+//     [item]: acc[item] ? acc[item] + 1 : 1
+//   }
+// }, {})
+// console.log(result);
 
-const result = array.reduce((acc, item) => {
-  return {
-    ...acc,
-    [item]: acc[item] ? acc[item] + 1 : 1
-  }
-}, {})
-console.log(result);
+// //TODO:=============================================
+// /**
+//  *? Напиши функцію конструктор Storage який створює об'єкти
+//  *? Для управління складом товарів.
+//  *? При виклику отримуватиме один агрумент - початковий масив товарів,
+//  *? і записувати їх у властивість items.
+//  *? Додай методи класу:
+//  *? getItems() - повертайте масив товарів
+//  *? addItems(item) - отримує новий товар та додає його до поточних
+//  *? removeItem(item) - отримує товар і, якщо він є, видаляє його з поточних
+//  */
+
+// const arr = ["apple", "banana", "mango"];
+
+// const Storage = function (arr) {
+//   this.items = arr;
+//   this.getItems = function () {
+//     return this.items;
+//   };
+//   this.addItems = function (item) {
+//     this.items.push(item);
+//   };
+//   this.removeItem = function (item) {
+//     const index = this.items.indexOf(item);
+//     if (index === -1) {
+//       return;
+//     }
+//     this.items.splice(index, 1);
+//   };
+// };
+
+// const newStorage = new Storage(arr);
+// // console.log(newStorage);
+
+// newStorage.addItems("tomato");
+
+// newStorage.removeItem("dgdsgds");
+
+// console.log(newStorage.getItems());
