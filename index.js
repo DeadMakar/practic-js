@@ -199,11 +199,11 @@ for (const key of arr) {
 // *? Надайте ід для кожного продукту
 // */
 
-const fruits = [
-  { name: "apple", price: 200 },
-  { name: "orange", price: 300 },
-  { name: "grapes", price: 750 },
-];
+// const fruits = [
+//   { name: "apple", price: 200 },
+//   { name: "orange", price: 300 },
+//   { name: "grapes", price: 750 },
+// ];
 
 // const foo = (array) => {
 //   return array.map((item, index)=> {
@@ -224,3 +224,28 @@ const fruits = [
 //     })
 //    )
 
+
+/**
+*? Поверніть об'єкт, в якому вказано кількість тегів.
+*? Очікуваний результат {js: 3, nodejs: 3, html: 2, css: 2, react: 2}
+
+ */
+const tweets = [
+  { id: "000", likes: 5, tags: ["js", "nodejs"] },
+  { id: "001", likes: 2, tags: ["html", "css"] },
+  { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+  { id: "003", likes: 8, tags: ["css", "react"] },
+  { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+];
+
+
+const array = tweets.flatMap(item => item.tags);
+console.log(array);
+
+const result = array.reduce((acc, item) => {
+  return {
+    ...acc,
+    [item]: acc[item] ? acc[item] + 1 : 1
+  }
+}, {})
+console.log(result);
