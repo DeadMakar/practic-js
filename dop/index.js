@@ -375,12 +375,12 @@ for (const key of arr) {
   В іншому випадку повертає false
 */
 
-// const someFn = `function foo() {
-//   const arr = [1, 2, 3];
-//   console.log(arr);
-// }`;
+const someFn = `function} foo() {
+  const arr = [1, 2, 3];
+  console.log(arr);
+}`;
 
-// console.log(checkBrackets(someFn));
+// // console.log(checkBrackets(someFn));
 
 // function checkBrackets(str) {
 //   const stack = [];
@@ -404,8 +404,34 @@ for (const key of arr) {
 //   return stack.length === 0;
 // }
 
-// console.log(checkBrackets("someFn"));
-// console.log(checkBrackets("(someFn)"));
-// console.log(checkBrackets("({})"));
-// console.log(checkBrackets("({[}]"));
-// console.log(checkBrackets(")someFn("));
+// console.log(checkBrackets(someFn));
+// // console.log(checkBrackets("(someFn)"));
+// // console.log(checkBrackets("({})"));
+// // console.log(checkBrackets("({[}]"));
+// // console.log(checkBrackets(")someFn("));
+
+// function checkBrackets(str) {
+//   const stack = [];
+//   const obj = {
+//     "(": ")",
+//     "{": "}",
+//     "[": "]",
+//   };
+
+//   for (let i = 0; i < str.length; i++) {
+//     const bracket = str[i];
+//     if (bracket === "(" || bracket === "{" || bracket === "[") {
+//       stack.push(bracket);
+//     }
+//     if (bracket === "}" || bracket === ")" || bracket === "]") {
+//       const lastEl = stack.pop();
+//       if (bracket !== obj[lastEl]) {
+//         return false;
+//       }
+//     }
+//   }
+//   if (stack.length) return false;
+//   return true;
+// }
+
+// console.log(checkBrackets(someFn));
