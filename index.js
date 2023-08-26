@@ -78,7 +78,14 @@
 Завдання 5
 Додайте слухач кліку на window і визначте чи клікнув користувач у дів з id="place".
 */
-
+// const placeRef = document.querySelector("#place");
+// document.body.addEventListener("click", (event) => {
+//   console.log(event.target);
+//   console.log(event.currentTarget);
+//   if (event.target === placeRef) {
+//     console.log("КЛЫКНУВ, КУРВА");
+//   }
+// });
 //TODO:==============================================
 /*
 Завдання 6
