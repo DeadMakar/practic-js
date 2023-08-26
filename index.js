@@ -31,8 +31,6 @@
 //     rightSwapEl.value = leftInputValue
 // }
 
-
-
 //TODO:==============================================
 /*
 Завдання 3
@@ -40,6 +38,19 @@
 "Розкрити", при повторному натисканні текст знову стає доступним
 і кнопка набуває початкового вигляду.
 */
+// const passwordInputEl = document.querySelector("#passwordInput");
+// const passwordButtonEl = document.querySelector("#passwordButton");
+
+// passwordButtonEl.addEventListener("click", () => {
+//   if (passwordButtonEl.textContent === "Розкрыть") {
+//     passwordInputEl.setAttribute("type", "text");
+//     passwordButtonEl.textContent = "Скрыть";
+//     return;
+//   }
+
+//   passwordInputEl.setAttribute("type", "password");
+//   passwordButtonEl.textContent = "Розкрыть";
+// });
 
 //TODO:==============================================
 /*
