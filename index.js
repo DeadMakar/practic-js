@@ -57,6 +57,21 @@
 Завдання 4
 Кнопка "Зменшити" робить квадрат менше на 10 пікселів,  "Збільшити" - більше на 10 пікселів.
 */
+// const decreaseBtnEl = document.querySelector("#decrease");
+// const increaseBtnEl = document.querySelector("#increase");
+// const boxEl = document.querySelector("#box");
+// decreaseBtnEl.addEventListener("click", () => {
+//   const size = getComputedStyle(boxEl).width;
+//   boxEl.style.width = parseInt(size) - 10 + "px";
+//   boxEl.style.height = parseInt(size) - 10 + "px";
+
+// });
+
+// increaseBtnEl.addEventListener("click", () => {
+//   const size = getComputedStyle(boxEl).width;
+//   boxEl.style.width = parseInt(size) + 10 + "px";
+//   boxEl.style.height = parseInt(size) + 10 + "px";
+// });
 
 //TODO:==============================================
 /*
