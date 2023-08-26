@@ -288,9 +288,6 @@ for (const key of arr) {
 
 // console.log(newStorage.getItems());
 
-
-
-
 //TODO:=============================================
 
 /**
@@ -299,8 +296,6 @@ for (const key of arr) {
  *? Оголоси приватні властивості #login #email,
  *? доступ до яких зроби через геттер та сеттер login email
  */
-
-
 
 // class Client{
 //   #login
@@ -322,11 +317,10 @@ for (const key of arr) {
 //     this.#email = newEmail
 //   }
 // }
- 
+
 // const user = new Client('mango', 'mkjh')
 // user.email = 'non'
 // console.log(user.email);
-
 
 //TODO:=============================================
 /**
@@ -348,7 +342,6 @@ for (const key of arr) {
 //       LOW: "low",
 //     };
 //   }
-
 
 //   constructor() {
 //     this.items = [];
@@ -388,3 +381,31 @@ const someFn = `function foo() {
 }`;
 
 console.log(checkBrackets(someFn));
+
+function checkBrackets(str) {
+  const stack = [];
+  const openingBrackets = "({[";
+  const closingBrackets = ")}]";
+
+  for (let char of str) {
+    if (openingBrackets.includes(char)) {
+      stack.push(char);
+    } else if (closingBrackets.includes(char)) {
+      const lastOpeningBracket = stack.pop();
+      const expectedOpeningBracket =
+        openingBrackets[closingBrackets.indexOf(char)];
+
+      if (lastOpeningBracket !== expectedOpeningBracket) {
+        return false;
+      }
+    }
+  }
+
+  return stack.length === 0;
+}
+
+console.log(checkBrackets("someFn"));
+console.log(checkBrackets("(someFn)"));
+console.log(checkBrackets("({})"));
+console.log(checkBrackets("({[}]"));
+console.log(checkBrackets(")someFn("));
