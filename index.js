@@ -93,6 +93,13 @@
 у кожному елементі списку у 2 рази
 */
 
+const doubleBtnEl = document.querySelector('#double')
+const listItemEl = document.querySelectorAll('.listItem')
+
+doubleBtnEl.addEventListener("click", () => {
+    listItemEl.forEach(el => el.textContent = BigInt (el.textContent) ** 2n)
+})
+
 //TODO:==============================================
 /*
 Завдання 7
