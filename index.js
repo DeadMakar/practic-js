@@ -18,6 +18,21 @@
 Ви можете натиснути на неї кілька разів або вручну змінити вміст інпутів.
 */
 
+// const swapBtnEl = document.querySelector('#swapButton')
+// const leftSwapEl = document.querySelector('#leftSwapInput')
+// const rightSwapEl = document.querySelector('#rightSwapInput')
+
+// swapBtnEl.addEventListener('click', onChangeInputHandle)
+
+// function onChangeInputHandle(event) {
+//     const leftInputValue = leftSwapEl.value;
+//     const rigthInputValue = rightSwapEl.value
+//     leftSwapEl.value = rigthInputValue;
+//     rightSwapEl.value = leftInputValue
+// }
+
+
+
 //TODO:==============================================
 /*
 Завдання 3
